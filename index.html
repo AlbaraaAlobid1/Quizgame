@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizgame</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="quiz-shell">
+    <section class="quiz-card" aria-labelledby="game-title">
+      <header class="quiz-header">
+        <div>
+          <p class="eyebrow">Quizgame</p>
+          <h1 id="game-title">Teste dein Wissen</h1>
+        </div>
+        <div class="header-actions">
+          <button class="theme-button" id="theme-button" type="button" aria-label="Dark Mode aktivieren" title="Dark Mode aktivieren">☾</button>
+          <p class="score" aria-live="polite">Punkte: <strong id="score">0</strong></p>
+        </div>
+      </header>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span id="question-counter">Frage 1 von 5</span>
+          <span id="progress-percent">20%</span>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="question-area">
+        <p class="category" id="category">Allgemeinwissen</p>
+        <h2 id="question">Frage wird geladen ...</h2>
+        <div class="answers" id="answers"></div>
+      </div>
+
+      <footer class="quiz-footer">
+        <p class="feedback" id="feedback" aria-live="polite"></p>
+        <button class="next-button" id="next-button" type="button" disabled>Nächste Frage</button>
+      </footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
